@@ -1,6 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
-from pointnet2_utils import PointNetSetAbstractionMsg, PointNetSetAbstraction
+from Pointnet_Pointnet2_pytorch.log.classification.pointnet2_msg_normals.pointnet2_utils import PointNetSetAbstractionMsg, PointNetSetAbstraction
 
 
 class get_model(nn.Module):
@@ -36,7 +36,7 @@ class get_model(nn.Module):
         x = F.log_softmax(x, -1)
 
 
-        return x,l3_points
+        return l3_points
 
 
 class get_loss(nn.Module):
